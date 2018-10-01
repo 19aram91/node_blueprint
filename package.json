@@ -1,0 +1,36 @@
+{
+  "name": "node_blueprint",
+  "version": "1.0.0",
+  "description": "bluprint for node express app, using mongo, myslq, docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "export NODE_ENV=prod|| set NODE_ENV=prod&& node ./www/server.js",
+    "start_test": "export NODE_ENV=dev|| set NODE_ENV=dev&& pm2 start ./www/server.js --name test_story_box && pm2 logs",
+    "restart": "pm2 restart story_box && pm2 logs",
+    "restart_test": "pm2 restart test_story_box && pm2 logs",
+    "stop": "pm2 stop story_box",
+    "stop_test": "pm2 stop test_story_box"
+  },
+  "author": "Aram Manukyan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "crypto": "^1.0.1",
+    "dateformat": "^2.2.0",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.2.1",
+    "md5": "^2.2.1",
+    "mongoose": "^5.0.11",
+    "morgan": "~1.8.1",
+    "mysql": "^2.14.1",
+    "nconf": "^0.10.0",
+    "pug": "~2.0.0-beta11",
+    "serve-favicon": "~2.4.2",
+    "socket.io": "^2.0.3",
+    "winston": "^2.3.1"
+  }
+}
